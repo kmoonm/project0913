@@ -8,6 +8,10 @@
 <title>데이터 확인</title>
 </head>
 <body>
+<%@ include file="header.jsp" %>
+<%@ include file="nav.jsp" %>
+<section>
+<h2>회원 정보 조회</h2>
 <%@ include file = "dbconn.jsp" %>
 	<table border=1>
 		<tr>
@@ -43,5 +47,7 @@
 		}
 %>
 	</table>
+</section>
+<%@ include file="footer.jsp" %>
 </body>
 </html>

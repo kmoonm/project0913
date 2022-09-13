@@ -13,6 +13,7 @@
 	String id = request.getParameter("id");
 	String password = request.getParameter("password");
 	String name = request.getParameter("name");
+	String check = request.getParameter("check");
 	
 	try {
 		// 1. sql 문 만들기
@@ -23,12 +24,14 @@
 		ps.setString(1, id);
 		ps.setString(2, password);
 		ps.setString(3, name);
+		
 		//4. 데이터 업데이트
 		ps.executeUpdate();
 		System.out.println("데이터 삽입에 성공했습니다.");
 		%>
 		<script>
-			alert("저장성공!");
+			alert("저장 성공");
+			location.href="select.jsp";
 		</script> 
 				
 		<%
